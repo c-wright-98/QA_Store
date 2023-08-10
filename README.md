@@ -18,7 +18,7 @@ The minimal viable product for this project is to have a website with a home pag
 
 To be able to manage the products for the store and create a functioning cart system and categories page a database using MySQL was used. Here I created three tables for storing and managing the data, these were the product table, category table and cart_items table.
 
-The product table had the following attributes:
+The product table has the following attributes:
 - product_id (int,Primary key)
 - category_id (int, foreign key to the category table)
 - name (VAR_CHAR(50))
@@ -26,11 +26,11 @@ The product table had the following attributes:
 - price (float)
 - image_URL (VAR_CHAR(200))
 
-The category table had the following attributes:
+The category table has the following attributes:
 - category_id (int, foreign key to the category table)
 - name (VAR_CHAR(50))
 
-The cart_items table had the following attributes:
+The cart_items table has the following attributes:
 - cart_id (int,Primary key)
 - product_id (int, foreign key to the product table)
 - quantity (int)
