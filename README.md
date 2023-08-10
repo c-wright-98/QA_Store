@@ -36,4 +36,4 @@ The cart_items table has the following attributes:
 - quantity (int)
 
 ### Entity Relationships Diagram
-![Entity Relationships Diagram of store database ](/path/to/image.png "ERD of store database")
+<img scr = "/images/placeholder.png" alt = "Entity Relationship Diagram for the Store database" width = "50" hight = "50">
