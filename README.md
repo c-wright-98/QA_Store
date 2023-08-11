@@ -32,8 +32,9 @@ The category table has the following attributes:
 
 The cart_items table has the following attributes:
 - cart_id (int,Primary key)
-- product_id (int, foreign key to the product table)
+- user_id (int, foreign key to the user table)
 - order_id (int, foreign key to the order table)
+- product_id (int, foreign key to the product table)
 - quantity (int)
 
 In addition to these a user table and an orders table will also be created so orders placed after payment can be accessed by customers using their username and password, this would also mean creating a registration form for customers.
