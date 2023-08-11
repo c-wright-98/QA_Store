@@ -57,7 +57,7 @@ The orders table has the following attributes:
 - status (varchar(50)) this will have status of either processing, shipped or delivered
 - shipping address (varchar(200))
 
-### Entity Relationships Diagram
+<h3 align="center"> Entity Relationships Diagram </h3>
 <p align="center" width="100%">
 <img src = "https://github.com/c-wright-98/QA_Store/blob/main/images/ERD.png" alt = "Entity Relationship Diagram for the store database" width = "33%">
 </p>
