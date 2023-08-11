@@ -33,7 +33,28 @@ The category table has the following attributes:
 The cart_items table has the following attributes:
 - cart_id (int,Primary key)
 - product_id (int, foreign key to the product table)
+- order_id (int, foreign key to the order table)
 - quantity (int)
+
+In addition to these a user table and an orders table will also be created so orders placed after payment can be accessed by customers using their username and password, this would also mean creating a registration form for customers.
+
+The users table will have the following attributes:
+
+- user_id (int, primary key)
+- username (varchar(50))
+- email (varchar(100))
+- password_hash (varchar(200))
+
+    The hashed password is used for security purposes.
+
+The orders table has the following attributes:
+
+- order_id (int, primary key)
+- user_id (int, foreign key referencing users table)
+- order_date (DATETIME)
+- total_amount (float)
+- status (varchar(50)) this will have satus of either processing, shipped or delivered
+- shipping address (varchar(200))
 
 ### Entity Relationships Diagram
 <img src = "https://github.com/c-wright-98/QA_Store/blob/main/images/placeholder.png" alt = "Entity Relationship Diagram for the tore database" width = "500" hight = "500">
