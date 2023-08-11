@@ -41,3 +41,7 @@ User story: As a customer, I want my payment details to be passed to a external 
 User story: As a visitor, I want to see the contact information for the business on the contact us page including address, phone number and email.
 
 User story: As a visitor, I want to learn about the store's mission, history and the team behind it on the about page.
+
+### Orders
+
+User story: As a customer, I want to access my order history to review my previous purchases.
