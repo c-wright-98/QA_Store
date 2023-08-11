@@ -54,7 +54,7 @@ The orders table has the following attributes:
 - user_id (int, foreign key referencing users table)
 - order_date (DATETIME)
 - total_amount (float)
-- status (varchar(50)) this will have satus of either processing, shipped or delivered
+- status (varchar(50)) this will have status of either processing, shipped or delivered
 - shipping address (varchar(200))
 
 ### Entity Relationships Diagram
