@@ -1,0 +1,7 @@
+flask
+flask_sqlalchey
+flask_bycrypt
+flask_wtf
+wtforms
+flask_testing
+pymysql
