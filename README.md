@@ -58,4 +58,6 @@ The orders table has the following attributes:
 - shipping address (varchar(200))
 
 ### Entity Relationships Diagram
-<img src = "https://github.com/c-wright-98/QA_Store/blob/main/images/placeholder.png" alt = "Entity Relationship Diagram for the tore database" width = "500" hight = "500">
+<p align="center" width="100%">
+<img src = "https://github.com/c-wright-98/QA_Store/blob/main/images/ERD.png" alt = "Entity Relationship Diagram for the store database" width = "33%">
+</p>
