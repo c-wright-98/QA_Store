@@ -1,5 +1,6 @@
-element {
-    --bg_colour:#DAD7CD;
+/* global variables */
+:root {
+    --bg_colour: white;
     --main_green: #57CC99;
     --select: #48B89F;
     --button: #C7F9CC;
