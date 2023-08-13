@@ -7,7 +7,7 @@ element {
 }
 
 header {
-    background-color: var(--main_green);
+    background-color: var(--main_green) !important;
 }
 
 main {
@@ -16,7 +16,7 @@ main {
 /* Styling for Navbar */
 
 .navbar {
-    background-color: var(--main_green);
+    background-color: var(--main_green) !important;
     overflow: hidden;
 }
 
@@ -34,7 +34,7 @@ main {
 
 .nav_list li a {
     display: block;
-    color: var(--bg_colour);
+    color: var(--bg_colour) !important;
     text-align: center;
     padding: 10px 10px;
 
@@ -43,14 +43,14 @@ main {
 /* change colour when selected */
 
 .nav_list li a:hover{
-    background-color: var(--select);
+    background-color: var(--select) !important;
 
 }
 
 /* Creating navbar for home, sign up and login buttons */
 
 .homelog {
-    background-color: var(--main_green);
+    background-color: var(--main_green) !important;
     overflow: hidden;
 }
 
@@ -59,7 +59,7 @@ main {
 }
 
 .log_reg {
-    background-color: var(--button);
+    background-color: var(--button) !important;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -71,12 +71,17 @@ main {
 
 .log_reg li a {
     display: block;
-    color: var(--bg_colour);
+    color: var(--bg_colour) !important;
     text-align: center;
     padding: 10px 10px;
 }
 
 /* change colour when selected */
 .log_reg li a:hover {
-    background-color: var(--button_select);
+    background-color: var(--button_select) !important;
+}
+
+.home-content {
+    text-align: center !important;
+    margin-top: 5 px;
 }
