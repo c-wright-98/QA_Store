@@ -60,5 +60,5 @@ The orders table has the following attributes:
 You can see the SQL query for creating these tables <a href = "/documentation/SQL_Files/table_creation.sql">here</a>
 <h3 align="center"> Entity Relationships Diagram </h3>
 <p align="center" width="100%">
-<img src = "https://github.com/c-wright-98/QA_Store/blob/main/images/ERD.png" alt = "Entity Relationship Diagram for the store database" width = "33%">
+<img src = "static/images/ERD.png" alt = "Entity Relationship Diagram for the store database" width = "33%">
 </p>
