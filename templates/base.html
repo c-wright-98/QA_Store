@@ -2,15 +2,19 @@
 <html>
 
     <head>
-        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='stylesheets/style1.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='stylesheets/style1.css')}}?v=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
     </head>
 
     <body>
         <header>
+            <a class = "home_logo" href="{{url_for('home')}}"> Home </a>
+                <ul class="homelog_list">
+                    <li><a href="{{url_for('login')}}"> Login </a></li>
+                    <li><a href="{{url_for('register')}}"> Sign Up </a></li>
+                </ul>
             <nav class="navbar">
                 <ul class = "nav_list">
-                    <li><a href = "{{url_for('home')}}"> Home </a></li>
                     <li><a href="{{url_for('products')}}"> Products </a></li>
                     <li><a href="{{url_for('categories')}}"> Categories </a></li>
                     <li><a href="{{url_for('order_history')}}"> Orders </a></li>

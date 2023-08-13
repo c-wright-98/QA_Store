@@ -17,6 +17,7 @@ main {
 
 .navbar {
     background-color: var(--main_green);
+    overflow: hidden;
 }
 
 .nav_list {
@@ -27,7 +28,7 @@ main {
 }
 
 .nav_list li {
-    float: left;
+    float: right;
 
 }
 
@@ -45,3 +46,43 @@ main {
     background-color: var(--select);
 
 }
+
+/* Creating navbar for home, sign up and login buttons */
+
+.homelog {
+    background-color: var(--main_green);
+    overflow: hidden;
+}
+
+.homelog_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.homelog_list li {
+    float: left;
+
+}
+
+.homelog_list li a {
+    display: block;
+    color: var(--bg_colour);
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
+/* change colour when selected */
+
+.homelog_list li a:hover {
+    background-color: var(--select);
+}
+
+.home_logo{
+    float: centre;
+    background-color: var(--bg_colour);
+    padding: 10px;
+}
+
