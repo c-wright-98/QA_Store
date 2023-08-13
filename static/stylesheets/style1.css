@@ -49,12 +49,7 @@ main {
 
 /* Creating navbar for home, sign up and login buttons */
 
-.homelog {
-    background-color: var(--main_green) !important;
-    overflow: hidden;
-}
-
-.home_logo{
+.home_logo {
     padding: 10px 10px;
 }
 
@@ -80,6 +75,35 @@ main {
 .log_reg li a:hover {
     background-color: var(--button_select) !important;
 }
+
+/* Styling for footer */
+
+.footerbar {
+    background-color: var(--main_green) !important;
+    padding: 10px !important;
+    position: absolute;
+    bottom: 0;
+    text-align: center;;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.footer-links li a {
+    color: var(--bg_colour) !important;
+
+}
+
+/* Styling for home page */
 
 .home-content {
     text-align: center !important;
