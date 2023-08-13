@@ -3,13 +3,16 @@
 
     <head>
         <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='stylesheets/style1.css')}}?v=1">
+        <!-- The ?v=1 makes sure this is the only css file in the website cache-->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
     </head>
 
     <body>
         <header>
-            <a class = "home_logo" href="{{url_for('home')}}"> Home </a>
-                <ul class="homelog_list">
+            <a class = "home_logo" href="{{url_for('home')}}">
+                <img src="{{url_for('static',filename='images/home.png')}}" alt= Logo width="100px" height="100px"/>
+            </a> <!-- Added anchor link to image as homepage link -->
+                <ul class = "log_reg">
                     <li><a href="{{url_for('login')}}"> Login </a></li>
                     <li><a href="{{url_for('register')}}"> Sign Up </a></li>
                 </ul>

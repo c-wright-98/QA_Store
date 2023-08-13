@@ -54,35 +54,29 @@ main {
     overflow: hidden;
 }
 
-.homelog_list {
+.home_logo{
+    padding: 10px 10px;
+}
+
+.log_reg {
+    background-color: var(--button);
     list-style: none;
     margin: 0;
     padding: 0;
-
 }
 
-.homelog_list li {
+.log_reg li {
     float: left;
-
 }
 
-.homelog_list li a {
+.log_reg li a {
     display: block;
     color: var(--bg_colour);
     text-align: center;
     padding: 10px 10px;
-
 }
 
 /* change colour when selected */
-
-.homelog_list li a:hover {
-    background-color: var(--select);
+.log_reg li a:hover {
+    background-color: var(--button_select);
 }
-
-.home_logo{
-    float: centre;
-    background-color: var(--bg_colour);
-    padding: 10px;
-}
-
