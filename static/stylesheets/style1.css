@@ -1,0 +1,47 @@
+element {
+    --bg_colour:#DAD7CD;
+    --main_green: #57CC99;
+    --select: #48B89F;
+    --button: #C7F9CC;
+    --button_select: #80ED99;
+}
+
+header {
+    background-color: var(--main_green);
+}
+
+main {
+    background-color: var(--bg_colour);
+}
+/* Styling for Navbar */
+
+.navbar {
+    background-color: var(--main_green);
+}
+
+.nav_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav_list li {
+    float: left;
+
+}
+
+.nav_list li a {
+    display: block;
+    color: var(--bg_colour);
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
+/* change colour when selected */
+
+.nav_list li a:hover{
+    background-color: var(--select);
+
+}
