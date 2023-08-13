@@ -16,7 +16,23 @@ bcrypt = Bcrypt(app)
 
 @app.route('/', methods=['GET'])
 def home():
-    return "Welcome to the home page"
+    return render_template('home.html')
+
+@app.route('/orders', methods=['GET'])
+def order_history():
+    return render_template('orders.html')
+
+@app.route('/products', methods=['GET'])
+def products():
+    return render_template('products.html')
+
+@app.route('/categories', methods=['GET'])
+def categories():
+    return render_template('categories.html')
+
+@app.route('/cart', methods=['GET'])
+def cart():
+    return render_template('cart.html')
 
 
 if __name__ == '__main__':
