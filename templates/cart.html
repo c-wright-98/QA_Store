@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <form action="{{url_for('checkout')}}" method="get">
-        <button type="submit"> Go to Checkout </button>
-    </form>
+    <div class="form-content">
+        <h2> Cart </h2>
+        <form action="{{url_for('checkout')}}" method="get">
+            <button type="submit"> Go to Checkout </button>
+        </form>
+    </div>
 {% endblock %}

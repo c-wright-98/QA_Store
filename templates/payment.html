@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div class="form-content">
+        <h2> Payment </h2>
         <form action="{{url_for('success')}}" method="get">
-        <button type="submit"> Test Payment </button>
+
+            <button type="submit"> Test Payment </button>
         </form>
+    </div>
 {% endblock %}
