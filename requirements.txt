@@ -1,6 +1,6 @@
 flask
 flask_sqlalchemy
-flask_bycrypt
+flask-bcrypt
 flask_wtf
 wtforms
 flask_testing
