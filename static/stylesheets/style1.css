@@ -153,3 +153,11 @@ footer {
 .contact-content, .contact-info {
     text-align: center !important;
 }
+
+/* Styling for forms */
+.form-content {
+    max-width: 500px;
+    margin: 0 auto !important; /* this centers the form */
+    padding: 10px;
+    background-color: var(--bg_colour);
+}
