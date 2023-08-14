@@ -7,17 +7,36 @@
     --button_select: #80ED99;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    margin: 0; /* Remove default margin to prevent unwanted space */
+}
+
 header {
+    position: fixed;
+    top: 0;
     background-color: var(--main_green) !important;
+    width: 100%;
 }
 
 main {
-    background-color: var(--bg_colour) !important;
+    flex: 1;/* Allow main content to grow and take up remaining space */
+    background-color: var(--bg_colour);
+    padding: 20px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
 }
 
 footer {
-    background-color: var(--main_green) !important;
+    background-color: var(--main_green);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
 }
+
 /* Styling for Navbar */
 
 .navbar {
@@ -85,10 +104,12 @@ footer {
 
 .footerbar {
     background-color: var(--main_green);
+    width: 100%;
     padding: 10px !important;
     position: fixed;
     bottom: 0;
-    text-align: center;;
+    text-align: center;
+    overflow: hidden
 }
 
 .footer-links {
@@ -111,5 +132,22 @@ footer {
 
 .home-content {
     text-align: center !important;
-    margin-top: 5 px;
+}
+
+/* Styling for about page */
+
+.about-content {
+    text-align: center !important;
+}
+
+.about-content img {
+    width: 50%;
+    height: 50%;
+}
+
+
+/* Styling for contact page */
+
+.contact-content, .contact-info {
+    text-align: center !important;
 }
