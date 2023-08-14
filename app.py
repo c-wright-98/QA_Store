@@ -51,11 +51,11 @@ def about():
     return render_template('about.html')
 
 @app.route('/payment', methods=['GET','POST'])
-def about():
+def payment():
     return render_template('payment.html')
 
 @app.route('/checkout', methods=['GET','POST'])
-def about():
+def checkout():
     return render_template('checkout.html')
 
 if __name__ == '__main__':
