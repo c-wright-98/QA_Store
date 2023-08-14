@@ -58,5 +58,9 @@ def payment():
 def checkout():
     return render_template('checkout.html')
 
+@app.route('/success', methods=['GET','POST'])
+def successful():
+    return render_template(successful)
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

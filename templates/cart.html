@@ -1,3 +1,7 @@
 {% extends "base.html" %}
+
 {% block content %}
+    <form action="{{url_for('checkout')}}" method="get">
+        <button type="submit"> Go to Checkout </button>
+    </form>
 {% endblock %}
