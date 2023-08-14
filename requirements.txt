@@ -1,5 +1,5 @@
 flask
-flask_sqlalchey
+flask_sqlalchemy
 flask_bycrypt
 flask_wtf
 wtforms
