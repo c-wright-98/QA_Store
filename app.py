@@ -24,7 +24,8 @@ def order_history():
 
 @app.route('/products', methods=['GET','POST'])
 def products():
-    return render_template('products.html')
+    products = products.query.all()
+    return render_template('products.html', products=products)
 
 @app.route('/categories', methods=['GET','POST'])
 def categories():

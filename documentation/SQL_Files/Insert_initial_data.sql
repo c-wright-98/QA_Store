@@ -13,3 +13,10 @@ values (1001,101,'test','This is a test', 'static/images/plants/test-plant.png',
 select * from category;
 
 select * from products;
+
+alter table products
+add stock int;
+
+UPDATE products
+SET stock = 100
+WHERE product_id = 1001;
