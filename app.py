@@ -4,6 +4,8 @@ from flask_wtf import FlaskForm
 from flask_testing import TestCase
 from flask_bcrypt import Bcrypt
 import os
+from wtforms import StringField, IntegerField, DateField, ValidationError
+from wtforms.validators import DataRequired, Length, NumberRange, AnyOf
 
 app = Flask(__name__)
 
@@ -14,7 +16,7 @@ db = SQLAlchemy(app)
 
 bcrypt = Bcrypt(app)
 
-################################################################
+################################
 # Create database tables #
 class Category(db.Model):
     category_id = db.Column(db.Integer, primary_key=True, unique = True)
@@ -48,6 +50,31 @@ class Orders(db.Model):
     address = db.Column(db.String(255))
 
 ################################
+
+# Creating Validator Classes #
+
+class PaymentForm(FlaskForm):
+    cardholder_name = StringField(
+        "Cardholder Name",
+        validators=[DataRequired(), Length(min=2, max=30)]
+        )
+    cardnumber = StringField(
+        "Card Number",
+        validators=[DataRequired(), Length(min=16, max=16)]
+        )
+    expire = StringField(
+        "Expire Date",
+        validators=[DataRequired(), Length(min=7, max=7)]
+        )
+    SC = StringField(
+        "Security Code (CVC)",
+        validators=[DataRequired(), Length(min=3, max=4)]
+        )
+
+
+
+################################
+# App Routes #
 
 @app.route('/', methods=['GET','POST'])
 def home():
@@ -97,6 +124,9 @@ def checkout():
 @app.route('/success', methods=['GET','POST'])
 def successful():
     return render_template('success.html')
+
+################################
+# Running App #
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
