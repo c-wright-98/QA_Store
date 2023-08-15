@@ -171,4 +171,5 @@ footer {
     margin: 0 auto !important; /* this centers the form */
     padding: 10px;
     background-color: var(--bg_colour);
+    margin-bottom: 10px;
 }
