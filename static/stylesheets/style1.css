@@ -182,3 +182,8 @@ footer {
     display: inline-block;
     width: 40px;
 }
+
+.form-group input {
+    display: inline-block;
+    width: 40px;
+}
