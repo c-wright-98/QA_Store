@@ -7,6 +7,13 @@
     --button_select: #80ED99;
 }
 
+/* set font */
+html * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/*style blocks */
 body {
     display: flex;
     flex-direction: column;

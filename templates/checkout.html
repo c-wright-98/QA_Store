@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="form-content">
+    <div class="checkout-content">
         <h2> Checkout </h2>
-        <form action="{{url_for('payment')}}" method="post">
-            <label for="shipping-name"><strong> Name: </label>
-            <input type="text" id="shipping-name" name="shipping-name" required>
-            <br>
-            <label for="shipping-address"><strong> Address: </label>
-            <textarea type="text" id="shipping-address" name="shipping-address" required></textarea>
-            <br>
-            <button type="submit"> Place Order </button>
-        </form>
+        <div class="form-content">
+            <form action="{{url_for('payment')}}" method="post">
+                <label for="shipping-name"><strong> Name: </label>
+                <input type="text" id="shipping-name" name="shipping-name" required>
+                <br>
+                <label for="shipping-address"><strong> Address: </label>
+                <textarea type="text" id="shipping-address" name="shipping-address" required></textarea>
+                <br>
+                <button type="submit"> Place Order </button>
+            </form>
+        </div>
     </div>
 {% endblock %}
