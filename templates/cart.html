@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="login-content">
+    <div class="cart-content">
         <h2> Cart </h2>
         <div class="form-content">
             <form action="{{url_for('checkout')}}" method="get">
+                <div class="form-group">
                 <button type="submit"> Go to Checkout </button>
+                </div>
             </form>
         </div>
     </div>

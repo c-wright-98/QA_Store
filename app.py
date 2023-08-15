@@ -56,19 +56,23 @@ class Orders(db.Model):
 class PaymentForm(FlaskForm):
     cardholder_name = StringField(
         "Cardholder Name",
-        validators=[DataRequired(), Length(min=2, max=30)]
+        validators=[DataRequired(), Length(min=2, max=30)],
+        render_kw={"title": "Enter the cardholder's name"}
         )
     cardnumber = StringField(
         "Card Number",
-        validators=[DataRequired(), Length(min=16, max=16)]
+        validators=[DataRequired(), Length(min=16, max=16)],
+        render_kw={"title": "Enter the 16 digit card number"}
         )
     expire = StringField(
         "Expire Date",
-        validators=[DataRequired(), Length(min=7, max=7)]
+        validators=[DataRequired(), Length(min=7, max=7)],
+        render_kw={"title": "Enter the expiry date in MM/YYYY format"}
         )
     SC = StringField(
         "Security Code (CVC)",
-        validators=[DataRequired(), Length(min=3, max=4)]
+        validators=[DataRequired(), Length(min=3, max=4)],
+        render_kw={"title": "Enter the Security Code (CVC)"}
         )
 
 
@@ -115,6 +119,9 @@ def about():
 
 @app.route('/payment', methods=['GET','POST'])
 def payment():
+    form = PaymentForm()
+    if form.validate_on_submit():
+        return redirect(url_for('success'))
     return render_template('payment.html')
 
 @app.route('/checkout', methods=['GET','POST'])
