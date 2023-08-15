@@ -5,13 +5,17 @@
         <h2> Checkout </h2>
         <div class="form-content">
             <form action="{{url_for('payment')}}" method="post">
-                <label for="shipping-name"><strong> Name: </label>
-                <input type="text" id="shipping-name" name="shipping-name" required>
-                <br>
-                <label for="shipping-address"><strong> Address: </label>
-                <textarea type="text" id="shipping-address" name="shipping-address" required></textarea>
-                <br>
-                <button type="submit"> Place Order </button>
+                <div class="form-group">
+                    <label for="shipping-name"><strong> Name: </label>
+                    <input type="text" id="shipping-name" name="shipping-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-address"><strong> Address: </label>
+                    <textarea type="text" id="shipping-address" name="shipping-address" required></textarea>
+                </div>
+                    <div class="form-group">
+                    <button type="submit"> Place Order </button>
+                </div>
             </form>
         </div>
     </div>
