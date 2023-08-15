@@ -5,7 +5,25 @@
         <h2> Payment </h2>
         <div class="form-content">
             <form action="{{url_for('successful')}}" method="get">
+                <div class="form-group">
+                    <label for="cardholder_name"><strong> Cardholder's Name: </label>
+                    <input type="text" id="cardholder_name" name="cardholder_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardnumber"><strong> Card Number: </label>
+                    <input type="text" id="cardnumber" name="cardnumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="expire">Expiry Date: </label>
+                    <input type="text" id="expire" name="expire">
+                </div>
+                <div class="form-group">
+                    <label for="SC">Security Code (CVC): </label>
+                    <input type="text" id="SC" name="SC">
+                </div>
+                <div class="form-group">
                 <button type="submit"> Test Payment </button>
+                </div>
             </form>
         </div>
     </div>
