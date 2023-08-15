@@ -62,3 +62,7 @@ You can see the SQL query for creating these tables <a href = "/documentation/SQ
 <p align="center" width="100%">
 <img src = "static/images/ERD.png" alt = "Entity Relationship Diagram for the store database" width = "33%">
 </p>
+
+I had originally created the tables in the database using SQL querying but found it difficult to connect the tables to the flask application, upon research and going back over training I found it would be easier to remove the tables from the database and to recreate them using classes in the app file.
+
+Also create a create file to manage the database creation

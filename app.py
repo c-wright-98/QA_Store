@@ -14,6 +14,40 @@ db = SQLAlchemy(app)
 
 bcrypt = Bcrypt(app)
 
+################################################################
+# Create database tables #
+class Category(db.Model):
+    category_id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+
+class User(db.Model):
+    user_id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(50), unique = True)
+    password = db.Column(db.String(100))
+    email = db.Column(db.String(250), unique = True)
+
+class Products(db.Model):
+    product_id = db.Column(db.Integer, primary_key=True)
+    category_id = db.Column(db.Integer, db.ForeignKey('category.category_id'), nullable=False)
+    name = db.Column(db.String(100), nullable=False)
+    description = db.Column(db.String(255))
+    price = db.Column(db.Float, nullable=False)
+    stock = db.Column(db.Integer, nullable=False)
+
+class Cart(db.Model):
+    cart_id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.user_id'), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey('products.product_id'), nullable=False)
+    quantity = db.Column(db.Integer)
+
+class Orders(db.Model):
+    order_id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.user_id'), nullable=False)
+    cart_id = db.Column(db.Integer, db.ForeignKey('cart.cart_id'), nullable=False)
+    address = db.Column(db.String(255))
+
+################################
+
 @app.route('/', methods=['GET','POST'])
 def home():
     return render_template('home.html')
@@ -24,7 +58,7 @@ def order_history():
 
 @app.route('/products', methods=['GET','POST'])
 def products():
-    products = products.query.all()
+    products = Products.query.all()
     return render_template('products.html', products=products)
 
 @app.route('/categories', methods=['GET','POST'])
