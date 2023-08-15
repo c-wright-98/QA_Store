@@ -173,6 +173,6 @@ footer {
     background-color: var(--bg_colour);
 }
 
-input {
+.form-group {
     margin-bottom: 10px;
 }
