@@ -146,6 +146,10 @@ footer {
 /* Styling for about page */
 
 .about-content {
+    text-align: justify;
+}
+
+.about-content h2 {
     text-align: center !important;
 }
 
