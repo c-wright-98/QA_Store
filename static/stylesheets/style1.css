@@ -12,6 +12,11 @@ html * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+h2 {
+    text-align: center;
+    padding-top: 10px;
+}
+
 
 /*style blocks */
 body {
@@ -186,4 +191,49 @@ footer {
 .form-group input {
     padding: 0px;
 
+}
+
+/* Product Page styling */
+
+.product-content {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.product-list {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+}
+
+.single-product {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 2px dashed #48B89F;
+}
+
+.single-product h3 {
+    margin: 10px 0;
+}
+
+.single-product p {
+    margin: 10px 0;
+}
+
+/* button styling */
+
+button {
+    display: block;
+    margin-top: 10px;
+    background-color: var(--button);
+    color: var(--main_green);
+    padding: 10px 5px;
+}
+
+button:hover {
+    background-color: var(--button_select);
+    color: var(--bg_colour);
 }
