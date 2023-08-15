@@ -180,7 +180,7 @@ footer {
 /* set label size so input fields align */
 .form-group label {
     display: inline-block;
-    width: 40px;
+    width: 100px;
 }
 
 .form-group input {
