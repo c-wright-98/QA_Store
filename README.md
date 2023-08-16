@@ -156,7 +156,8 @@ A transition was made from using HTML forms to Flask forms as I accidentally use
 ---
 ## Jenkins
 
-I used jenkins to run the application in build environments, I did encounter an error when trying to connect to MySQL when using the pymysql connection so I amended the jenkins build script to use the sqlite connection.
+Jenkins was employed to automate build processes and test deployments. The Jenkins pipeline facilitated continuous integration and deployment, ensuring consistent application builds. I did encounter an error when trying to connect to MySQL when using the pymysql connection so I amended the jenkins build script to use the sqlite connection.
+
 This is my jenkins shell commands:
 <img src = "/documentation/screenshots/jenkins shell.png">
 
@@ -191,6 +192,13 @@ I initially started this project with the intentions of implementing a login sys
 Next time I work on a project like this I would prioritise back end development more as that is more crucial for a viable product then a pretty looking webpage with no function.
 
 I can also see how much easier this project would have been if working in a team and using Jira and an agile method to complete sprints, this would allow for smoother and speedier development with collaboration on more difficult aspects of the project.
+
+Future enhancements and improvements include:
+
+- Implementing user login for personalized experiences.
+- Focusing on robust back-end development for functional features.
+- Collaborative development using agile methods and team-based contributions.
+- Exploring webhook integration for automated testing.
 
 ---
 [Back to the top](#qa_store)
