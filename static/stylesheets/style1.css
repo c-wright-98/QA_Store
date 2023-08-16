@@ -148,6 +148,16 @@ footer {
     text-align: center !important;
 }
 
+/* styling cart content */
+.cart-content {
+    text-align: center;
+    margin: 0 auto !important;
+}
+
+li {
+    list-style: none;
+}
+
 /* Styling for about page */
 
 .about-content {
