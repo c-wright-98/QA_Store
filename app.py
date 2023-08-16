@@ -60,7 +60,7 @@ class PaymentForm(FlaskForm):
         )
     cardnumber = IntegerField(
         "Card Number",
-        validators=[DataRequired(), Length(min=16, max=16)]
+        validators=[DataRequired()]
         )
 
     expire = StringField(
@@ -69,7 +69,7 @@ class PaymentForm(FlaskForm):
         )
     SC = IntegerField(
         "Security Code (CVC)",
-        validators=[DataRequired(), Length(min=3, max=4)]
+        validators=[DataRequired()]
         )
 
     def validate_cardholder_name(self,field):
@@ -137,9 +137,9 @@ def payment():
 
     if form.validate_on_submit():
         message = "Successful Payment!"
-        return message
+        return render_template('payment.html', form=form, message=message)
 
-    return render_template('payment.html')
+    return render_template('payment.html', form=form)
 
 @app.route('/checkout', methods=['GET','POST'])
 def checkout():
