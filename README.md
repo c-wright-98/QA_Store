@@ -1,6 +1,6 @@
 # QA_Store
 
-This is the documentation for the QA Store project, a web application that simulates an online store selling plants. The project aims to provide users with a platform to navigate the website, view products, add them to a cart, and proceed to checkout.
+Welcome to the project documentation for QA_Store, an online plant store web application. This document outlines the development journey, challenges, and achievements of building an e-commerce platform using technologies like Python, Flask, HTML, CSS, SQL, and Jenkins. The goal was to create a functional store where users can browse products, add them to the cart, make purchases, and more
 
 Technologies used: Python, Flask, CSS, HTML, Jenkins, SQL, GIT and GitHub.
 ### Contents
@@ -25,9 +25,16 @@ Technologies used: Python, Flask, CSS, HTML, Jenkins, SQL, GIT and GitHub.
 
 ## Identifying Epics and tasks
 
-Using an Agile working methodology, the project requirements were broken down into user stories and further categorized into epics. The main users of the site were identified as store admins, customers, and visitors. Each group of users had specific requirements for the website. The requirements were then divided into epics to better organize tasks on the project's Kanban board in Jira.
+Using an Agile methodology, the project's requirements were dissected into user stories and grouped into epics. These epics categorized user stories for store administrators, customers, and visitors. The project used a Kanban board in Jira to manage tasks and maintain a structured development process.
 
 <a href = "/documentation/user_stories.md"> Click here to see the user stories and epics </a>
+
+Here are a few screenshot of the board:
+
+<img src = "/documentation/screenshots/board1.png">
+<img src = "/documentation/screenshots/log1.png">
+<img src = "/documentation/screenshots/log2.png">
+<img src = "/documentation/screenshots/board2.png">
 
 ---
 ## Functionality of site
