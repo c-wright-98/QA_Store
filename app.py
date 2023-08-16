@@ -58,18 +58,35 @@ class PaymentForm(FlaskForm):
         "Cardholder Name",
         validators=[DataRequired(), Length(min=2, max=30)]
         )
-    cardnumber = StringField(
+    cardnumber = IntegerField(
         "Card Number",
         validators=[DataRequired(), Length(min=16, max=16)]
         )
+
     expire = StringField(
         "Expire Date",
         validators=[DataRequired(), Length(min=7, max=7)]
         )
-    SC = StringField(
+    SC = IntegerField(
         "Security Code (CVC)",
         validators=[DataRequired(), Length(min=3, max=4)]
         )
+
+    def validate_cardholder_name(self,field):
+        if len(field.data) < 2 or len(field.data) > 30:
+            raise ValidationError("Please enter a valid Name")
+
+    def validate_cardnumber(self,field):
+        if len(str(field.data)) < 16:
+            raise ValidationError("Please enter a valid card number")
+
+    def validate_expire(self,field):
+        if len(field.data) < 7:
+            raise ValidationError("Please enter a valid expiry date")
+
+    def validate_SC(self,field):
+        if len(str(field.data)) < 3 or len(str(field.data)) > 4:
+            raise ValidationError("Please enter a valid Name")
 
 
 
@@ -89,11 +106,9 @@ def products():
     products = Products.query.all()
     return render_template('products.html', products=products)
 
-@app.route('/categories/<int:category_id>', methods=['GET','POST'])
-def categories(category_id):
-    category = Category.query.get(category_id)
-    products = Products.query.filter_by(category_id=category_id).all()
-    return render_template('categories.html', category= category, products = products)
+@app.route('/categories', methods=['GET','POST'])
+def categories():
+    return render_template('categories.html')
 
 @app.route('/cart', methods=['GET','POST'])
 def cart():
@@ -115,12 +130,14 @@ def contact():
 def about():
     return render_template('about.html')
 
-@app.route('/payment', methods=['GET','POST'])
+@app.route('/payment', methods=['POST'])
 def payment():
+    message = ""
     form = PaymentForm()
 
     if form.validate_on_submit():
-        return redirect(url_for('successful'))
+        message = "Successful Payment!"
+        return message
 
     return render_template('payment.html')
 
