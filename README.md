@@ -1,17 +1,40 @@
 # QA_Store
 
-This is the documentation for the QA Store project, I have decided to design a store front webpage based on the requirements laid out in the project brief description, creating a shop that sells plants letting users navigate the website pages, view products, add them to cart and checkout
+This is the documentation for the QA Store project, a web application that simulates an online store selling plants. The project aims to provide users with a platform to navigate the website, view products, add them to a cart, and proceed to checkout.
+
+### Contents
+
+[Identifying Epics and Tasks](#identifying-epics-and-tasks)
+
+[Functionality of Site](#functionality-of-site)
+
+[Database Creation](#database-creation)
+
+[Front End Development](#front-end-development)
+
+[Backend Development](#backend-developmet)
+
+[Jenkins](#jenkins)
+
+[Problems](#risks-and-difficulties)
+
+[Furture Ideas and Improvements](#furture-ideas-and-improvements)
+
+---
 
 ## Identifying Epics and tasks
 
-Using the brief and a AGILE working methodology I was to break down the brief into user stories and then into epics, I was able to identify three main users of the site the store admin, customers and visitors. All three have various user stories for the requirements of the website. I broke down the requirements of the site into epics to categories the user stories to be able to create tasks for my KanBan board on Jira.
+Using an Agile working methodology, the project requirements were broken down into user stories and further categorized into epics. The main users of the site were identified as store admins, customers, and visitors. Each group of users had specific requirements for the website. The requirements were then divided into epics to better organize tasks on the project's Kanban board in Jira.
 
 <a href = "/documentation/user_stories.md"> Click here to see the user stories and epics </a>
 
-## The MVP
+---
+## Functionality of site
+Here is a demostration of the webpage that I was able to create by the deadline:
 
-The minimal viable product for this project is to have a website with a home page that customers can then navigate from to view products, they will be able to select products to view more information about them and add products to their cart on either of these pages, they can also view their cart and increase the quantity of items if they would like too and proceed to checkout which will take them to the payment page where they can enter shipping details and payment details.
+<img src = "/documentation/screenshots/final.gif">
 
+---
 ## Database creation
 
 To be able to manage the products for the store and create a functioning cart system and categories page a database using MySQL was used. Here I created three tables for storing and managing the data, these were the product table, category table and cart_items table.
@@ -62,22 +85,53 @@ You can see the SQL query for creating these tables <a href = "/documentation/SQ
 </p>
 
 I had originally created the tables in the database using SQL querying but found it difficult to connect the tables to the flask application, upon research and going back over training I found it would be easier to remove the tables from the database and to recreate them using classes in the app file.
-Also created a create file to manage the database creation, both can be seen in the files above.
 
+Also created a create file to manage the database creation, the create file is <a href = "create.py">here</a>.
+
+---
 ## Front End Development
 
 For the front end development I made templates for the html files and a styling sheet to keep the styling consistent throughout the website, and extended from a base html to keep a header and footer on the webpage.
 
-## Backend Developmet
+These files are stored <a href = "/templates/">here</a>, in the templates folder and linked to the CSS stylesheet and images in the static folder.
 
-The backend development is where I encounted a lot of problems, I had difficulties implementing the functions to adding items to cart, I changed towards the end of the project from html forms to flask forms because I was accidently using both which was causing the payment forms not to be validated check I then ran out of time to switch the login and register forms over tot his format.
+---
+## Backend Development
 
+The back-end development faced challenges, particularly in implementing functions for adding items to the cart. I was able to create tables and add data to them using the create.py file but I was struggling to find a way within the deadline to implement the function of transferring product data to the cart table and then the cart table data to the orders table after successful payment validation.
+I also had trouble creating the category page, I knew I had to query the category table and get the category id and then filter the products in the product table by the category_id but was unable to implement that in time.
+
+A transition was made from using HTML forms to Flask forms as I accidentally used botha nd was causing the payment system to skip form validation, due to time constraints the login and register forms were not fully integrated into this format.
+
+---
 ## Jenkins
 
+I used jenkins to run the application in build environments, I did encounter an error when trying to connect to MySQL when using the pymysql connection so I amended the jenkins build script to use the sqlite connection.
+I did not manage to start creating 
 
+---
 ## Tests
 
+A test folder was set up with a test file to assess webpage responsiveness, but pytest has yet to be executed on them.
+
+---
 ## Risks and Difficulties
 
-I had trouble linking to the database wtih Jenkins at times, I have attached the amendments I had to do to make the builds happen.
-I also had trouble with time management with tasks taking longer to complete then expected as well as accessing the database to manage cart, I could not figure out how to start the process of adding products to a cart and following through the placing order and payment.
+Several challenges were encountered during the project:
+
+- Issues with linking the database to Jenkins and the subsequent adjustments needed to ensure successful builds.
+
+- Difficulty managing time, with some tasks taking longer than anticipated.
+
+- Challenges with cart management and the overall process of adding products to a cart and completing an order with payment.
+
+- Time management was a problem as I under estimated how long some task s would take and the problems I faced with back end development.
+
+---
+## Furture ideas and improvements
+
+I initially started this project with the intentions of implementing a login system as that was the only theological wa I could see getting the order history for individual customers to work. This is a function I think should still be implemented as the tables in the database use the user_id obtained from the users table to track items in carts as well as order history allowing for customers to come back to carts even if they log out.
+
+
+---
+[Back to the top](#qa_store)
