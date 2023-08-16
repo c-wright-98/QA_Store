@@ -43,7 +43,7 @@ Here is a demonstration of the webpage that I was able to create by the deadline
 <a href = "/documentation/final.mp4"> Webpage Demo</a>
 
 Below is screenshots of each page, the homepage had the most documentation of development as it was also styling the header and footer.
-The screenshots for all of them can be found <a herf = "/documentation/screenshots/Homepage_Dev">Here</a>.
+The screenshots for all of them can be found <a href = "/documentation/screenshots/Homepage_Dev">Here</a>.
 
 ### Homepage
 <img src = "/documentation/screenshots/Homepage.png">
