@@ -6,13 +6,13 @@ This is the documentation for the QA Store project, I have decided to design a s
 
 ## Identifying Epics and tasks
 
-Using the brief I was able to identify three main users of the site the store admin, customers and visitors. All three have various user stories for the requirements of the website. I broke down the requirements of the site into epics to categories the user stories to be able to create tasks for my KanBan board.
+Using the brief and a AGILE working methodology I was to break down the brief into user stories and then into epics, I was able to identify three main users of the site the store admin, customers and visitors. All three have various user stories for the requirements of the website. I broke down the requirements of the site into epics to categories the user stories to be able to create tasks for my KanBan board on Jira.
 
 <a href = "/documentation/user_stories.md"> Click here to see the user stories and epics </a>
 
 ## The MVP
 
-The minimal viable product for this project is to have a website with a home page that customers can then navigate from to view products all together or in categories, they will be able to select products to view more information about them and add products to their cart on either of these pages, they can also view their cart and increase the quantity of items if they would like too and proceed to checkout which will take them to the payment page where they can enter shipping details and payment details.
+The minimal viable product for this project is to have a website with a home page that customers can then navigate from to view products, they will be able to select products to view more information about them and add products to their cart on either of these pages, they can also view their cart and increase the quantity of items if they would like too and proceed to checkout which will take them to the payment page where they can enter shipping details and payment details.
 
 ## Database creation
 
@@ -64,5 +64,20 @@ You can see the SQL query for creating these tables <a href = "/documentation/SQ
 </p>
 
 I had originally created the tables in the database using SQL querying but found it difficult to connect the tables to the flask application, upon research and going back over training I found it would be easier to remove the tables from the database and to recreate them using classes in the app file.
+Also create a create file to manage the database creation, both can be seen in the files above.
 
-Also create a create file to manage the database creation
+## Front End Development
+
+For the front end development I made templates for the html files and a styling sheet to keep the styling consistent throughout the website, and extended from a base html to keep a header and footer on the webpage.
+
+## Backend Developmet
+
+## Jenkins
+
+
+## Tests
+
+## Risks and Difficulties
+
+I had trouble linking to the database wtih Jenkins at times, I have attached the amendments I had to do to make the builds happen.
+I also had trouble with time management with tasks taking longer to complete then expected as well as accessing the database to manage cart, I could not figure out how to start the process of adding products to a cart and following through the placing order and payment.
