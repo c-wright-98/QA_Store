@@ -64,13 +64,15 @@ You can see the SQL query for creating these tables <a href = "/documentation/SQ
 </p>
 
 I had originally created the tables in the database using SQL querying but found it difficult to connect the tables to the flask application, upon research and going back over training I found it would be easier to remove the tables from the database and to recreate them using classes in the app file.
-Also create a create file to manage the database creation, both can be seen in the files above.
+Also created a create file to manage the database creation, both can be seen in the files above.
 
 ## Front End Development
 
 For the front end development I made templates for the html files and a styling sheet to keep the styling consistent throughout the website, and extended from a base html to keep a header and footer on the webpage.
 
 ## Backend Developmet
+
+The backend development is where I encounted a lot of problems, I had difficulties implementing the functions to adding items to cart, I changed towards the end of the project from html forms to flask forms because I was accidently using both which was causing the payment forms not to be validated check I then ran out of time to switch the login and register forms over tot his format.
 
 ## Jenkins
 
