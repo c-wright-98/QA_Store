@@ -35,7 +35,7 @@ header {
 }
 
 main {
-    flex: 1;/* Allow main content to grow and take up remaining space */
+    flex: 4;/* Allow main content to grow and take up remaining space */
     background-color: var(--bg_colour);
     padding: 20px;
     padding-top: 150px;
@@ -201,7 +201,6 @@ li {
 
 .form-group input {
     padding: 0px;
-
 }
 
 /* Product Page styling */
@@ -217,12 +216,11 @@ li {
 /* this is were you edit the styling of the list of products */
 .product-list {
     display: flex;
-    flex-wrap: calc(33.33% - 5px);
-    flex-direction: row;
+    flex-direction: column;
+    flex-wrap: 450px;
     justify-content: center;
     align-items: center; /*align at top of container */
     gap: 10px;
-    max-width: 450px;
     margin: 0 auto !important;
 }
 
@@ -244,8 +242,8 @@ li {
 }
 
 .single-product img{
-    max-width: 80%;
-    height: auto;
+    width:300px;
+    max-height:250px ;
     margin: 0;
     padding: 10px;
 }
