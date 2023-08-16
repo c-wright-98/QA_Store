@@ -3,18 +3,15 @@
 {% block content %}
     <div class="cart-content">
         <h2> Cart </h2>
+        <ul>
+            {%for item in cart_list %}
+            <li>{{item.name}} - {{item.price}}</li>
+            {%endfor%}
+        </ul>
+        <p>Total Price:£{{totalprice}}</p>
         <div class="form-content">
             <form action="{{url_for('checkout')}}" method="post">
-                <table>
-                    <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                    </tr>
-                </table>
-                <div class="form-group">
                 <button type="submit"> Go to Checkout </button>
-                </div>
             </form>
         </div>
     </div>

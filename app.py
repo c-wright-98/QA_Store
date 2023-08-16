@@ -112,7 +112,10 @@ def categories():
 
 @app.route('/cart', methods=['GET','POST'])
 def cart():
-    return render_template('cart.html')
+    cart_list = [{"name": "Product1", "price": 10.99},
+                {"name": "Product2", "price": 10.99}]
+    totalprice = sum(item['price'] for item in cart_list)
+    return render_template('cart.html', cart_list=cart_list, totalprice=totalprice)
 
 @app.route('/login', methods=['GET','POST'])
 def login():
