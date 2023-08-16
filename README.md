@@ -2,6 +2,7 @@
 
 This is the documentation for the QA Store project, a web application that simulates an online store selling plants. The project aims to provide users with a platform to navigate the website, view products, add them to a cart, and proceed to checkout.
 
+Technologies used: Python, Flask, CSS, HTML, Jenkins, SQL, GIT and GitHub.
 ### Contents
 
 [Identifying Epics and Tasks](#identifying-epics-and-tasks)
@@ -18,7 +19,7 @@ This is the documentation for the QA Store project, a web application that simul
 
 [Problems](#risks-and-difficulties)
 
-[Furture Ideas and Improvements](#furture-ideas-and-improvements)
+[Future Ideas and Improvements](#furture-ideas-and-improvements)
 
 ---
 
@@ -30,9 +31,43 @@ Using an Agile working methodology, the project requirements were broken down in
 
 ---
 ## Functionality of site
-Here is a demostration of the webpage that I was able to create by the deadline:
+Here is a demonstration of the webpage that I was able to create by the deadline
 
-<img src = "/documentation/screenshots/final.gif">
+<a href = "/documentation/final.mp4"> Webpage Demo</a>
+
+Below is screenshots of each page, the homepage had the most documentation of development as it was also styling the header and footer.
+The screenshots for all of them can be found <a herf = "/documentation/screenshots/Homepage_Dev">Here</a>.
+
+### Homepage
+<img src = "/documentation/screenshots/Homepage.png">
+
+### About
+<img src = "/documentation/screenshots/Aboutpage.png">
+
+### Contact Us
+<img src = "/documentation/screenshots/Contactpage.png">
+
+### Login
+<img src = "/documentation/screenshots/Loginpage.png">
+
+### Register
+<img src = "/documentation/screenshots/Signuppage.png">
+
+### Products
+<img src = "/documentation/screenshots/Productpage.png">
+
+### Cart
+<img src = "/documentation/screenshots/Cartpage.png">
+
+### Checkout
+<img src = "/documentation/screenshots/Checkoutpage.png">
+
+### Payment
+<img src = "/documentation/screenshots/paymentpage.png">
+
+Payment Success:
+
+<img src = "/documentation/screenshots/paysuccess.png">
 
 ---
 ## Database creation
@@ -95,6 +130,14 @@ For the front end development I made templates for the html files and a styling 
 
 These files are stored <a href = "/templates/">here</a>, in the templates folder and linked to the CSS stylesheet and images in the static folder.
 
+I did have issues trying to get the products to line up next to each other on the product page using flex positioning and wrapping, I managed to achieve this with three test products but when I added over three the products overflowed to column wrapping.
+
+Test Products:
+<img src = "/documentation/screenshots/Product Page.png">
+
+Final Product Page:
+<img src = "/documentation/screenshots/Productpage.png">
+
 ---
 ## Backend Development
 
@@ -107,7 +150,11 @@ A transition was made from using HTML forms to Flask forms as I accidentally use
 ## Jenkins
 
 I used jenkins to run the application in build environments, I did encounter an error when trying to connect to MySQL when using the pymysql connection so I amended the jenkins build script to use the sqlite connection.
-I did not manage to start creating 
+This is my jenkins shell commands:
+<img src = "/documentation/screenshots/jenkins shell.png">
+
+This is the successful build of the application:
+<img src = "/documentation/screenshots/Jenkins Build.png">
 
 ---
 ## Tests
@@ -127,11 +174,16 @@ Several challenges were encountered during the project:
 
 - Time management was a problem as I under estimated how long some task s would take and the problems I faced with back end development.
 
+
+
 ---
-## Furture ideas and improvements
+## Future ideas and improvements
 
 I initially started this project with the intentions of implementing a login system as that was the only theological wa I could see getting the order history for individual customers to work. This is a function I think should still be implemented as the tables in the database use the user_id obtained from the users table to track items in carts as well as order history allowing for customers to come back to carts even if they log out.
 
+Next time I work on a project like this I would prioritise back end development more as that is more crucial for a viable product then a pretty looking webpage with no function.
+
+I can also see how much easier this project would have been if working in a team and using Jira and an agile method to complete sprints, this would allow for smoother and speedier development with collaboration on more difficult aspects of the project.
 
 ---
 [Back to the top](#qa_store)
