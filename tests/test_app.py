@@ -22,5 +22,4 @@ class TestBase(TestCase):
         db.session.remove()
         db.drop_all()
 
-def test_home_page():
-    #
+#def test_home_page():
