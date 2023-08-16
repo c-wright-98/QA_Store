@@ -2,25 +2,4 @@
 
 {% block content %}
 
-    <div class="category-content">
-        <h2> Product Page </h2>
-        <div class = "category-buttons">
-            {% for category in categories %}
-                <a href="{{url_for('categories', 'category_id = category.category_id')}}" class="category-button"><button>{{category.name}}</button></a>
-            {% endfor %}
-        </div>
-        <br>
-        <div class="product-list">
-            {% for product in products %}
-            <div class="single-product">
-                <img src="{{product.image_URL}}" alt="{{product.name}}">
-                <h3>{{product.name}}</h3>
-                <p>{{product.description}}</p>
-                <p>£{{product.price}}</p>
-                <button> Add to Cart </button>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
 {% endblock %}

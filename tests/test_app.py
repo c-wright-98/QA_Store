@@ -5,7 +5,7 @@ from flask import url_for
 
 
 class TestBase(TestCase):
-    
+
     def create_app(self):
 
         # Pass in testing configurations for the app. 
