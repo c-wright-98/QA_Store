@@ -51,5 +51,7 @@ with app.app_context():
     db.session.add(indoors)
     db.session.add(outdoors)
     db.session.add(pots)
-    db.session.add(test_product,test_product2,test_product3)
+    db.session.add(test_product)
+    db.session.add(test_product2)
+    db.session.add(test_product3)
     db.session.commit()
