@@ -89,9 +89,11 @@ def products():
     products = Products.query.all()
     return render_template('products.html', products=products)
 
-@app.route('/categories', methods=['GET','POST'])
-def categories():
-    return render_template('categories.html')
+@app.route('/categories/<int:category_id>', methods=['GET','POST'])
+def categories(category_id):
+    category = Category.query.get(category_id)
+    products = Products.query.filter_by(category_id=category_id).all()
+    return render_template('categories.html', category= category, products = products)
 
 @app.route('/cart', methods=['GET','POST'])
 def cart():
