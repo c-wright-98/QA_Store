@@ -25,9 +25,9 @@ test_product = Products(
     stock = 99
 )
 
-test_product2 = Products(
-    product_id = 1002,
-    category_id = 102,
+test_product3 = Products(
+    product_id = 1003,
+    category_id = 103,
     image_URL = 'static/images/plants/test-plant.png',
     description = 'This is a test',
     name = 'Test Product',
@@ -42,5 +42,5 @@ with app.app_context():
     #db.session.add(outdoors)
     #db.session.add(pots)
     #db.session.add(test_product)
-    #db.session.add(test_product2)
+    #db.session.add(test_product3)
     db.session.commit()
