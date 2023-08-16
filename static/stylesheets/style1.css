@@ -199,17 +199,18 @@ footer {
     display: flex;
     flex-direction: column; /*display content one after the other in column order */
     align-content: center;
+    max-width: 1350px;
 }
 
 /* this is were you edit the styling of the list of products */
 .product-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: calc(50% - 10px);
     flex-direction: row;
+    justify-content: center;
+    align-items: center; /*align at top of container */
     gap: 10px;
-    padding: 10px;
-    margin: 10px;
-    width: 250px;
+    width: 450px;
 }
 
 /*this is were you style each individual product */
